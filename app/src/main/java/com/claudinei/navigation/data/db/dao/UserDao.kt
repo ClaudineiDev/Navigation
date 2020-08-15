@@ -15,6 +15,6 @@ interface UserDao {
     @Query("SELECT * FROM USER WHERE ID = :id")
     fun getUser(id: Long): UserEntity
 
-    @Query("SELECT ID FROM USER WHERE USERNAME = :username and password")
+    @Query("SELECT ID FROM USER WHERE USERNAME = :username and PASSWORD = :password")
     fun login(username: String, password: String):Long
 }

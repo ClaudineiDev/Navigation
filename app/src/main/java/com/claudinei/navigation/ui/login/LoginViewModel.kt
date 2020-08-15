@@ -14,7 +14,7 @@ class LoginViewModel : ViewModel() {
     }
 
     var username: String = ""
-    var token: String = ""
+    private var token: String = ""
 
     private val _authenticationStateEvent = MutableLiveData<AuthenticationState>()
     val authenticationStateEvent: LiveData<AuthenticationState>
